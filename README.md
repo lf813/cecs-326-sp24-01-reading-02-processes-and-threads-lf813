@@ -5,8 +5,12 @@
 Answer the following questions from the chapter 2 reading from your text book. Be complete with your answers. You may work on these questions with one or two other partners, but *all* students must submit the document individually in their own repositories along with each student's name documented with the submission.
 
 1. Assume that you are trying to download a large 2-GB file from the Internet. The file is available from a set of mirror servers, each of which can deliver a subset of the file’s bytes; assume that a given request specifies the starting and ending bytes of the file. Explain how you might use threads to improve the download time.
+
+    With threads, it will be possible to have multiple processes to each download from a different mirror server, instead of waiting for a process to go one server at a time. This will speed up the download time.
    
 2. What is the biggest advantage of implementing threads in user space? What is the biggest disadvantage?
+
+    
    
 3. Does Peterson’s solution to the mutual-exclusion problem shown in Fig. 2-24 of MOS4e work when process scheduling is preemptive? How about when it is nonpreemptive?
    
