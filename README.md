@@ -13,6 +13,8 @@ Answer the following questions from the chapter 2 reading from your text book. B
     The most obvious and significant advantage of implementing threads is that a user-level threads package can be implemented on an operating system that does not support threads by a library. The disadvantage involves blocking calls and allowing a blocked thread to affect the performance of the others.
    
 3. Does Peterson’s solution to the mutual-exclusion problem shown in Fig. 2-24 of MOS4e work when process scheduling is preemptive? How about when it is nonpreemptive?
+
+				Peterson's solution relies on nonpreemptive scheduling and will perfoem well without any interruption in the critical region. However when scheduling is preemptive, there can be problems when two processes call enter_region and the slightly faster one will be overwritten.
    
 4. The producer-consumer problem can be extended to a system with multiple producers and consumers that write (or read) to (from) one shared buffer. Assume that each producer and consumer runs in its own thread. Will the solution presented in Fig. 2-28 of MOS4e, using semaphores, work for this system?
    
