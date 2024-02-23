@@ -10,7 +10,7 @@ Answer the following questions from the chapter 2 reading from your text book. B
    
 2. What is the biggest advantage of implementing threads in user space? What is the biggest disadvantage?
 
-    
+    The most obvious and significant advantage of implementing threads is that a user-level threads package can be implemented on an operating system that does not support threads by a library. The disadvantage involves blocking calls and allowing a blocked thread to affect the performance of the others.
    
 3. Does Peterson’s solution to the mutual-exclusion problem shown in Fig. 2-24 of MOS4e work when process scheduling is preemptive? How about when it is nonpreemptive?
    
