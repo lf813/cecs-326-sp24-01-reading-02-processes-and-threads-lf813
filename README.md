@@ -17,8 +17,12 @@ Answer the following questions from the chapter 2 reading from your text book. B
 				Peterson's solution relies on nonpreemptive scheduling and will perfoem well without any interruption in the critical region. However when scheduling is preemptive, there can be problems when two processes call enter_region and the slightly faster one will be overwritten.
    
 4. The producer-consumer problem can be extended to a system with multiple producers and consumers that write (or read) to (from) one shared buffer. Assume that each producer and consumer runs in its own thread. Will the solution presented in Fig. 2-28 of MOS4e, using semaphores, work for this system?
+
+				The solution will work, as it uses three binary semaphores that are protected by a lock variable to make sure that only one CPU at a time examines the semaphore.
    
 5. How could an operating system that can disable interrupts implement semaphores?
+
+				For interruption sequences, you can implement a semaphore to hide the interruptions. This an be done by having it initialized to 0, and being set to up when an interrupt handler comes in after an interruption.
 
 6. A fast-food restaurant has four kinds of employees:
     (a) order takers, who take customers’ orders; 
@@ -28,7 +32,11 @@ Answer the following questions from the chapter 2 reading from your text book. B
     
     Each employee can be regarded as a communicating sequential process. What form of interprocess communication do they use? Relate this model to processes in UNIX.
 
+			This scenario relates most to Peterson's solution. Specifically a producer and consumer solution. The order takers produce data and the cooks and cashiers take data and process it in sequential order. The buffer can be the amount of orders rung up.
+
 7. Five jobs are waiting to be run. Their expected run times are 9, 6, 3, 5, and x. In what order should they be run to minimize average response time? (Your answer will depend on x).
+
+				
 
 8. The aging algorithm with a = 1/2 is being used to predict run times. The previous four runs, from oldest to most recent, are 40, 20, 40, and 15 msec. What is the prediction of the next time? Explain.
 
