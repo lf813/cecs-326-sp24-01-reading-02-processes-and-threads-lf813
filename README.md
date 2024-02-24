@@ -40,9 +40,11 @@ Answer the following questions from the chapter 2 reading from your text book. B
 
 8. The aging algorithm with a = 1/2 is being used to predict run times. The previous four runs, from oldest to most recent, are 40, 20, 40, and 15 msec. What is the prediction of the next time? Explain.
 
-				
+    If we perform the aging algorithm with these runs and a=1/2, we will apply the heavist weight on T0=40 and so on. 40(1/2,) 20(1/4), 40(1/8), and 15(1/16). These add up to around 30 mms which is the prediction for the next time.
 
 9. In the dining philosophers problem, let the following protocol be used: An even-numbered philosopher always picks up his left fork before picking up his right fork; an odd-numbered philosopher always picks up his right fork before picking up his left fork. Will this protocol guarantee deadlock-free operation? Why or why not?
+
+    Yes, as this allows for maximum parallelism for an arbitrary number of philosophers. An even numbered philosopher will check for its neighbors, the odd, to see if they are  both not eating, then it will proceed to eat. This is done with an array and a binary semaphore.
 
 10. The readers and writers problem can be formulated in several ways with regard to which category of processes can be started when. Carefully describe three different variations of the problem, each one favoring (or not favoring) some category of processes. For each variation, specify what happens when a reader or a writer becomes ready to access the database, and what happens when a process is finished.
 
