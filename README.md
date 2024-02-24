@@ -48,5 +48,11 @@ Answer the following questions from the chapter 2 reading from your text book. B
 
 10. The readers and writers problem can be formulated in several ways with regard to which category of processes can be started when. Carefully describe three different variations of the problem, each one favoring (or not favoring) some category of processes. For each variation, specify what happens when a reader or a writer becomes ready to access the database, and what happens when a process is finished.
 
+    a. A public restroom at a very large mall. There are many people constantly using it and the janitor who's scheduled to clean the restroom at night can't do his job because there's never an empty restroom.
+
+    b. A web developer trying to cache and update his busy site. If the writer sees no readers it will access and work on his website. Meanwhile, all other users(readers) must wait until the writer exits, which can create traffic.
+
+    c. People driving their cars across a 4-way intersection when the power is out. In this case, the writer and reader have no priority over another and is based on turns. Once the other cars completely cross the road, the driver may proceed and it goes back and forth.
+
 ### Deliverables
 Commit the answers to the questions in a readable file to your git repository by the due date and time indicated with your repository. Approved file submission formats are: .txt, .md, .pdf. .html (renderable) or anything that is web-readable on Github. Other formats will only be accepted with explicit approval.
